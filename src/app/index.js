@@ -10,7 +10,6 @@ angular.module('feedReader', ['ngAnimate', 'ngSanitize', 'ngRoute', 'ngMaterial'
       .when('/categories/:title', {
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
-      //  controller: 'CategoryCtrl'
       })
       .otherwise({
         redirectTo: '/'
