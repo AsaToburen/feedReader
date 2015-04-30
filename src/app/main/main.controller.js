@@ -54,7 +54,7 @@ angular.module('feedReader')
       });
     };
 
-    
+
     //angular.forEach($scope.categories, function(i) {
     //    i.showfull = true;
     //    i.active = false;
