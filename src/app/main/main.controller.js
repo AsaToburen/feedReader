@@ -6,43 +6,62 @@ angular.module('feedReader')
     $scope.categories = [{
       title: "News",
       description: "See a list of assorted news sources.",
-      active: false,
+      showfull: true,
       source: ""
     }, {
       title: "Tech",
       description: "See a list of assorted news sources.",
-      active: false,
+      showfull: true,
       source: ""
     }, {
       title: "Music",
       description: "See a list of assorted news sources.",
-      active: false,
+      showfull: true,
       source: ""
     }, {
       title: "Art",
       description: "See a list of assorted news sources.",
-      active: false,
+      showfull: true,
       source: ""
     }, {
       title: "Health",
       description: "See a list of assorted news sources.",
-      active: false,
+      showfull: true,
       source: ""
     }, {
       title: "Food",
       description: "See a list of assorted news sources.",
-      active: false,
+      showfull: true,
       source: ""
     }];
 
-    $scope.setActive = function(category) {
-      console.log($scope.categories);
-      if (category.active === false) {
-        category.active = true;
-      } else {
-        category.active = false;
-      }
+    $scope.expand = function(category) {
+      angular.forEach($scope.categories, function(i) {
+        if (i === category) {
+          i.showfull = true;
+          i.active = true;
+        } else {
+          i.showfull = false;
+        }
+      });
     };
+
+
+    $scope.collapse = function(category) {
+      angular.forEach($scope.categories, function(i) {
+        i.showfull = true;
+        i.active = null;
+      });
+    };
+
+    
+    //angular.forEach($scope.categories, function(i) {
+    //    i.showfull = true;
+    //    i.active = false;
+    //});
+
+
+
 
 
 

@@ -25,6 +25,10 @@ md-toolbar.md-default-theme {
   background-color: black;
 }
 
+md-content {
+  width: 100%;
+}
+
 section.jumbotron {
   margin-bottom: 30px;
   padding: 1px 30px;
@@ -41,6 +45,8 @@ section.jumbotron {
   flex-flow: row wrap;
   md-card {
     width: 30%;
+    background-color: #fff;
+    transition: all 1s ease;
     a {
       text-decoration: none;
       color: #000;
@@ -51,7 +57,14 @@ section.jumbotron {
     }
   }
   md-card.active {
+    width: 100%;
     background-color: #1B39A8;
+    height: 20em;
+    svg {
+      background-color: #fff;
+      float: right;
+      margin: -3.2em .7em;
+    }
   }
 }
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
