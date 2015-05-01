@@ -6,27 +6,25 @@ angular.module('feedReader')
 
       $scope.categories = categoryService.data;
 
-      $scope.expand = function(category) {
-        angular.forEach($scope.categories, function(i) {
-          if (i === category) {
-            i.showfull = true;
-            i.active = true;
-          } else {
-            i.showfull = false;
-          }
-        });
-      };
-
-      $scope.collapse = function(category) {
-        angular.forEach($scope.categories, function(i) {
-          i.showfull = true;
-          i.active = null;
-        });
-      };
+      //$scope.expand = function(category) {
+      //  angular.forEach($scope.categories, function(i) {
+      //    if (i === category) {
+      //      i.showfull = true;
+      //      i.active = true;
+      //    } else {
+      //      i.showfull = false;
+      //    }
+      //  });
+      //};
+      //
+      //$scope.collapse = function(category) {
+      //  angular.forEach($scope.categories, function(i) {
+      //    i.showfull = true;
+      //    i.active = null;
+      //  });
+      //};
 
       $scope.categoryData = categoryService;
-        console.log(categoryService);
+      console.log(categoryService);
 
-
-    }
-  ]);
+}]);

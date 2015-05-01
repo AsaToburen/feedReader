@@ -3,7 +3,20 @@
 angular.module('feedReader')
   .controller('CategoryCtrl', ['$scope', 'categoryService',
    function($scope, categoryService){
-    console.log('CategoryCtrl');
-    console.log(categoryService);
+    
+    $scope.data = {
+
+    },
+
+    $scope.tech = {},
+
+    $scope.music = {},
+
+    $scope.health = {},
+
+    $scope.food = {},
+
+    $scope.art = {}
+
 
   }]);
