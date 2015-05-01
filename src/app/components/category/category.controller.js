@@ -1,9 +1,10 @@
 'use strict';
 
 angular.module('feedReader')
-  .controller('CategoryCtrl', ['$scope', 'categoryService',
-   function($scope, categoryService){
-    
+  .controller('CategoryCtrl', ['$scope', 'categoryData',
+   function($scope, categoryData) {
+
+        
     $scope.data = {
 
     },
