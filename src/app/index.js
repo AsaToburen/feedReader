@@ -3,7 +3,7 @@
 angular.module('feedReader', ['ngAnimate', 'ngSanitize', 'ngRoute', 'ngMaterial'])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/categories', {
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
       })
@@ -12,7 +12,6 @@ angular.module('feedReader', ['ngAnimate', 'ngSanitize', 'ngRoute', 'ngMaterial'
         controller: 'MainCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/categories'
       });
-  })
-;
+  });
