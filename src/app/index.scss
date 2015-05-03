@@ -51,9 +51,14 @@ section.jumbotron {
       text-decoration: none;
       color: #000;
     }
-    img.pull-right {
+    h3 {
+      display: inline-block;
+      padding-left: .5em;
+    }
+    img {
       float: right;
       width: 50px;
+      margin: .5em;
     }
   }
   md-card.active {
