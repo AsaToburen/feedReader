@@ -1,10 +1,8 @@
 'use strict';
 
 angular.module('feedReader')
-  .controller('CategoryCtrl', ['$scope', '$http', '$location', '$q', 'categoryData', 'feedService', 'categoryService',
-    function($scope, $http, $location, $q, categoryData, feedService, categoryService) {
-
-      console.log(categoryData);
+  .controller('CategoryCtrl', ['$scope', 'categoryData', 'categoryService',
+    function($scope, categoryData, categoryService) {
 
       $scope.sources = categoryData;
       $scope.getRss = categoryService.getRss;

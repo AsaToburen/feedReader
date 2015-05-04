@@ -20,15 +20,6 @@ angular.module('feedReader', ['ngAnimate', 'ngRoute', 'ngMaterial'])
       .when('/categories/:category/:feed', {
         templateUrl: 'app/components/feedDetail/feed.view.html',
         controller: 'FeedCtrl'
-        //resolve: {
-        //  feedData: ['$route', 'feedService', 'categoryService', function($route, feedService, categoryService) {
-        //    var feed = $route.current.params.feed;
-        //    //console.log(feed);
-        //    //var url = categoryService.
-        //    //angular.forEach feed in categoryService.feed = feed /// get source
-        //    //return feedService.getRss;
-        //  }]
-        //}
       })
       .otherwise({
         redirectTo: '/'

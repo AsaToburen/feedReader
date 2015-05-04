@@ -1,43 +1,36 @@
 'use strict';
 
 angular.module('feedReader')
-  .controller('MainCtrl', ['$scope', 'feedService', 'categoryService',
-    function($scope, feedService, categoryService) {
+  .controller('MainCtrl', ['$scope', 'categoryService',
+    function($scope, categoryService) {
 
       $scope.categories = [{
         title: 'News',
         description: 'See a list of assorted news sources.',
-        
-        source: ''
+        icon: 'earth.svg'
       }, {
         title: 'Tech',
-        description: 'See a list of assorted news sources.',
-        showfull: true,
-        source: ''
+        description: 'Check out the latest tech magazines.',
+        icon: 'cellphone-link.svg'
       }, {
         title: 'Music',
-        description: 'See a list of assorted news sources.',
-        showfull: true,
-        source: ''
+        description: 'See a list of popular music blogs.',
+        icon: 'headphones.svg'
       }, {
         title: 'Art',
-        description: 'See a list of assorted news sources.',
-        showfull: true,
-        source: ''
+        description: 'Lookup some popular art blogs.',
+        icon: 'brush.svg'
       }, {
         title: 'Health',
-        description: 'See a list of assorted news sources.',
-        showfull: true,
-        source: ''
+        description: 'Stay informed on the latest informationa and health trends.',
+        icon: 'dumbbell.svg'
       }, {
         title: 'Food',
-        description: 'See a list of assorted news sources.',
-        showfull: true,
-        source: ''
+        description: 'Take a look at some of the best food blogs.',
+        icon: 'silverware-variant.svg'
       }];
 
+      $scope.categoryData = categoryService;
 
-    $scope.categoryData = categoryService;
-    console.log(categoryService);
-
-  }]);
+    }
+  ]);
