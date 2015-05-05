@@ -1,4 +1,4 @@
-<md-card ng-repeat="category in categories">
+<md-card ng-repeat="category in categories" ng-class="{{category.title}}">
     <a ng-href="#/categories/{{category.title}}">
         <div class="caption">
             <h3>{{category.title}}</h3>

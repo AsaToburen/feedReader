@@ -45,7 +45,6 @@ section.jumbotron {
   flex-flow: row wrap;
   md-card {
     width: 30%;
-    background-color: #fff;
     transition: all 1s ease;
     a {
       text-decoration: none;
@@ -70,6 +69,22 @@ section.jumbotron {
       float: right;
       margin: -3.2em .7em;
     }
+  }
+  md-card.news {
+    background-color: #009688;
+    &:hover {
+      background-color: #009688;
+    } 
+  }
+    md-card.tech {
+    &:hover {
+      background-color: #448AFF;
+    } 
+  }
+    md-card.news {
+    &:hover {
+      background-color: #009688;
+    } 
   }
 }
 
