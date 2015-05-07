@@ -7,10 +7,11 @@ angular.module('feedReader')
       var source = categoryService.sources[$routeParams.feed].source;
 
       var srcImg = categoryService.sources[$routeParams.feed].image;
-      console.log(srcImg);
 
       categoryService.getRss(source).then(function(res) {
-        $scope.feedHeading = res.description;
+        console.log('getting Source');
+        console.log(res);
+        $scope.feedHeading = (res.description || res.title);
         $scope.feedEntries = res.entries;
       });
     }

@@ -5,7 +5,6 @@ angular.module('feedReader')
     function($scope, categoryData) {
 
       $scope.sources = categoryData;
-      //$scope.getRss = categoryService.getRss;
 
 }]);
 
