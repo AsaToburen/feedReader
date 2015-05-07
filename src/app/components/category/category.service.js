@@ -113,7 +113,6 @@ angular.module('feedReader')
 
           deferred.resolve(data.responseData.feed);
         });
-
         return deferred.promise;
       }
     };
@@ -121,19 +120,4 @@ angular.module('feedReader')
 
   }]);
 
-/*
-      getRss: function(url) {
 
-        var deferred = $q.defer();
-
-        var req = $http.jsonp('//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(url));
-
-        req.success(function(data) {
-          categoryData.feed = data;
-
-          deferred.resolve(data.responseData.feed);
-        });
-
-        return deferred.promise;
-      }
-  */

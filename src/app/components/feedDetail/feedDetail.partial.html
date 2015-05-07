@@ -1,6 +1,30 @@
-<div layout="column">
-  <h1>{{feedHeading}}</h1>
-  <ul>
-    <li ng-repeat="(key, value) in feedEntries">{{value.title}}</li>
-  </ul>
+<div layout="vertical">
+    <md-content layout="column">
+        <md-tabs md-selected="selectedIndex" md-border-bottom>
+            <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.name}}">
+                <div class="tab" style="padding: 25px; text-align: left;">
+                    <!-- <div ng-bind="tab.content"></div> -->
+                    <div></div>
+                    <br/>
+                    <md-list layout="column">
+                        <md-toolbar md-scroll-shrink>
+                            <div class="md-toolbar-tools">
+                                <h3>
+                                 <span>{{feedHeading}}</span>
+                                </h3>
+                            </div>
+                        </md-toolbar>
+                        <md-list-item class="md-3-line" ng-repeat="(key, value) in feedEntries">
+                            <div class="md-list-item-text">
+                                <h3>{{ value.title }}</h3>
+                                <h4>{{}}</h4>
+                                <p>{{}}</p>
+                            </div>
+                        </md-list-item>
+                        </md-divider>  
+                    </md-list>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </md-content>
 </div>

@@ -1,18 +1,20 @@
 'use strict';
 
 angular.module('feedReader')
-  .controller('FeedCtrl', ['$scope', '$routeParams', 'categoryService',
-    function($scope, $routeParams, categoryService) {
+  .controller('FeedCtrl', ['$scope', '$routeParams', 'categoryService', 'categoryData',
+    function($scope, $routeParams, categoryService, categoryData) {
+
+      $scope.tabs = categoryData;
+      console.log(categoryData);
 
       var source = categoryService.sources[$routeParams.feed].source;
 
       var srcImg = categoryService.sources[$routeParams.feed].image;
 
       categoryService.getRss(source).then(function(res) {
-        console.log('getting Source');
-        console.log(res);
-        $scope.feedHeading = (res.description || res.title);
+        $scope.feedHeading = ( res.title || res.description );
         $scope.feedEntries = res.entries;
+        console.log(res);
       });
     }
   ]);
