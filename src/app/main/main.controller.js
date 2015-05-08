@@ -4,6 +4,14 @@ angular.module('feedReader')
   .controller('MainCtrl', ['$scope', 'categoryService',
     function($scope, categoryService) {
 
+      $scope.addCategory = function() {
+        console.log(this.text);
+        if ($scope.text) {
+          $scope.categories.push(this.text);
+          $scope.text = '';
+        }
+      };
+
       $scope.categories = [{
         title: 'News',
         description: 'See a list of assorted news sources.',

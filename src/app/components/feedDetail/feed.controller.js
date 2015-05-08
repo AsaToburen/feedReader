@@ -14,6 +14,8 @@ angular.module('feedReader')
       categoryService.getRss(source).then(function(res) {
         $scope.feedHeading = ( res.title || res.description );
         $scope.feedEntries = res.entries;
+        $scope.link = res.link;
+        console.log(res.link);
         console.log(res);
       });
     }

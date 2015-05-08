@@ -21,6 +21,29 @@ html {
   }
 }
 
+md-list-item {
+  md-card {
+      cursor: pointer;
+  }
+}
+.md-list-item-text h3 {
+  z-index: 10;
+}
+
+.entry-content {
+  transition: all ease;
+  position: relative;
+  
+}
+
+.entry-content.ng-hide {
+  position: relative;
+  
+}
+//
+//.entry-content.ng-hide-add {
+//  
+//}
 
 md-content {
   width: 100%;
