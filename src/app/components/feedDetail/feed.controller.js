@@ -5,7 +5,6 @@ angular.module('feedReader')
     function($scope, $routeParams, categoryService, categoryData) {
 
       $scope.tabs = categoryData;
-      console.log(categoryData);
 
       $scope.selectedIndex = 0;
 
@@ -22,11 +21,9 @@ angular.module('feedReader')
 
       $scope.changeFeed = function(source) {
         categoryService.getRss(source).then(function(res) {
-          $scope.feedHeading = ( res.title || res.description );
+          $scope.feedHeading = (res.title || res.description);
           $scope.feedEntries = res.entries;
           $scope.link = res.link;
-          console.log(res.link);
-          console.log(res);
         });
       };
     }

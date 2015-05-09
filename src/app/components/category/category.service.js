@@ -5,7 +5,8 @@ angular.module('feedReader')
 
     var categoryData = {
 
-      feed: {},
+      data: [],
+
 
       getCategoryData: function(input) {
         var deferred = $q.defer();
@@ -103,21 +104,19 @@ angular.module('feedReader')
         }
       },
       getRss: function(url) {
-
         var deferred = $q.defer();
-
-        var req = $http.jsonp('//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(url));
-
-        req.success(function(data) {
-          categoryData.feed = data;
-
-          deferred.resolve(data.responseData.feed);
-        });
+        if (angular.isDefined(categoryData.data[url])) {
+          deferred.resolve(categoryData.data[url]);
+        } else {
+          var req = $http.jsonp('//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(url));
+          req.success(function(data) {
+            deferred.resolve(data.responseData.feed);
+            categoryData.data[url] = data.responseData.feed;
+          });
+        }
         return deferred.promise;
       }
     };
     return categoryData;
 
   }]);
-
-
