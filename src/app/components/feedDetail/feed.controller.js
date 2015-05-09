@@ -7,16 +7,27 @@ angular.module('feedReader')
       $scope.tabs = categoryData;
       console.log(categoryData);
 
+      $scope.selectedIndex = 0;
+
+      angular.forEach(categoryData, function(val, idx) {
+        if (val.name == $routeParams.feed) {
+          $scope.selectedIndex = idx;
+        }
+      });
+
       var source = categoryService.sources[$routeParams.feed].source;
 
       var srcImg = categoryService.sources[$routeParams.feed].image;
 
-      categoryService.getRss(source).then(function(res) {
-        $scope.feedHeading = ( res.title || res.description );
-        $scope.feedEntries = res.entries;
-        $scope.link = res.link;
-        console.log(res.link);
-        console.log(res);
-      });
+
+      $scope.changeFeed = function(source) {
+        categoryService.getRss(source).then(function(res) {
+          $scope.feedHeading = ( res.title || res.description );
+          $scope.feedEntries = res.entries;
+          $scope.link = res.link;
+          console.log(res.link);
+          console.log(res);
+        });
+      };
     }
   ]);

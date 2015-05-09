@@ -12,6 +12,19 @@ angular.module('feedReader')
         }
       };
 
+
+      //$scope.addFeed = function(sourceData) {
+      //
+      //  var newSource = sourceData.title : {
+      //    tags: [sourceData.tags],
+      //    name: sourceData.title,
+      //    icon: 'verge_icon.png',
+      //    image: 'verge.png',
+      //    source: sourceData.url
+      //  };
+      //  $scope.categories.push(newSource);
+      //};
+
       $scope.categories = [{
         title: 'News',
         description: 'See a list of assorted news sources.',

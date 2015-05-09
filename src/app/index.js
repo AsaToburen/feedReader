@@ -21,8 +21,6 @@ angular.module('feedReader', ['ngAnimate', 'ngRoute', 'ngMaterial'])
         templateUrl: 'app/components/feedDetail/feed.view.html',
         controller: 'FeedCtrl',
         resolve: {
-          // this resolve is probably unnecessary.. need to figure 
-          //out how to store data in service and delete data when navigation changes
           categoryData: ['$route', 'categoryService', function($route, categoryService) {
             var category = $route.current.params.category;
             return categoryService.getCategoryData(category);

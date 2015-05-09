@@ -23,9 +23,13 @@ html {
 
 md-list-item {
   md-card {
-      cursor: pointer;
+    cursor: pointer;
+    h3, p {
+      padding-left: 1em;
+    }
   }
 }
+
 .md-list-item-text h3 {
   z-index: 10;
 }
@@ -33,18 +37,16 @@ md-list-item {
 .entry-content {
   transition: all ease;
   position: relative;
-  
 }
 
 .entry-content.ng-hide {
   position: relative;
-  
 }
+
 //
 //.entry-content.ng-hide-add {
 //  
 //}
-
 md-content {
   width: 100%;
 }
@@ -59,7 +61,6 @@ section.jumbotron {
     font-size: 3em;
   }
 }
-
 
 .techs {
   display: flex;
@@ -95,23 +96,19 @@ section.jumbotron {
     background-color: #009688;
     &:hover {
       background-color: #009688;
-    } 
+    }
   }
-    md-card.tech {
+  md-card.tech {
     &:hover {
       background-color: #448AFF;
-    } 
+    }
   }
-    md-card.news {
+  md-card.news {
     &:hover {
       background-color: #009688;
-    } 
+    }
   }
 }
-
-
-
-
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */
 
