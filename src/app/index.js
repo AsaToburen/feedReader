@@ -30,9 +30,4 @@ angular.module('feedReader', ['ngAnimate', 'ngRoute', 'ngMaterial'])
       .otherwise({
         redirectTo: '/'
       });
-  })
-  .config(['$mdThemingProvider', function($mdThemingProvider) {
-    $mdThemingProvider.theme('default')
-      .primaryPalette('blue')
-      .accentPalette('blue-grey');
-  }]);
+  });
