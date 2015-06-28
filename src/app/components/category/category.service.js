@@ -7,7 +7,6 @@ angular.module('feedReader')
 
             data: [],
 
-
             getCategoryData: function(input) {
                 var deferred = $q.defer();
                 var filteredSources = _.filter(categoryData.sources, function(source) {
@@ -108,7 +107,36 @@ angular.module('feedReader')
                     icon: 'readwrite.jpeg',
                     image: 'readwrite-logo.png',
                     source: 'http://www.specificfeeds.com/Readwrite'
+                },
+                'MindBodyGreen': {
+                    tags: ['Health', 'Food'],
+                    name: 'MindBodyGreen',
+                    icon: 'logo-mbg-sm.svg',
+                    image: 'logo-mbg-sm.svg',
+                    source: 'http://www.mindbodygreen.com/rss/feed.xml'
+                },
+                'ReadWrite': {
+                    tags: ['Tech', 'News'],
+                    name: 'ReadWrite',
+                    icon: 'readwrite.jpeg',
+                    image: 'readwrite-logo.png',
+                    source: 'http://www.specificfeeds.com/Readwrite'
+                },
+                'ReadWrite': {
+                    tags: ['Tech', 'News'],
+                    name: 'ReadWrite',
+                    icon: 'readwrite.jpeg',
+                    image: 'readwrite-logo.png',
+                    source: 'http://www.specificfeeds.com/Readwrite'
+                },
+                'ReadWrite': {
+                    tags: ['Tech', 'News'],
+                    name: 'ReadWrite',
+                    icon: 'readwrite.jpeg',
+                    image: 'readwrite-logo.png',
+                    source: 'http://www.specificfeeds.com/Readwrite'
                 }
+
             },
             getRss: function(url) {
                 var deferred = $q.defer();
