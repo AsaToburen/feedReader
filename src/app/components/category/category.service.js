@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('feedReader')
-    .factory('categoryService', ['$q', '$location', '$http', function($q, $location, $http) {
+    .factory('categoryService', ['$q', '$location', '$http', 
+        function($q, $location, $http) {
 
         var categoryData = {
 
@@ -114,29 +115,7 @@ angular.module('feedReader')
                     icon: 'logo-mbg-sm.svg',
                     image: 'logo-mbg-sm.svg',
                     source: 'http://www.mindbodygreen.com/rss/feed.xml'
-                },
-                'ReadWrite': {
-                    tags: ['Tech', 'News'],
-                    name: 'ReadWrite',
-                    icon: 'readwrite.jpeg',
-                    image: 'readwrite-logo.png',
-                    source: 'http://www.specificfeeds.com/Readwrite'
-                },
-                'ReadWrite': {
-                    tags: ['Tech', 'News'],
-                    name: 'ReadWrite',
-                    icon: 'readwrite.jpeg',
-                    image: 'readwrite-logo.png',
-                    source: 'http://www.specificfeeds.com/Readwrite'
-                },
-                'ReadWrite': {
-                    tags: ['Tech', 'News'],
-                    name: 'ReadWrite',
-                    icon: 'readwrite.jpeg',
-                    image: 'readwrite-logo.png',
-                    source: 'http://www.specificfeeds.com/Readwrite'
                 }
-
             },
             getRss: function(url) {
                 var deferred = $q.defer();
